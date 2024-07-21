@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+            background: url(back1.jpg);
+        }
+        .flex{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text h1{
+            color:black;
+            font-weight: 800;
+            
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .text {
+            background-color: green;
+        }
+        @media screen and (max-width: 500px){
+            .img{
+                width: 59%;
+
+            }
+            .img img{
+                width: 80%;
+               display: block;
+                margin-left: auto;
+                margin-right: auto;
+
+
+            }
+            .flex{
+                margin-top: 100px;
+            }
+            .text {
+                height: 50px;
+                margin-top: 20px;
+             }
+            .text h1 {
+                font-size: 20px;
+                
+             }
+        }
+</style>
+<body>
+    <div class="flex">
+        <div class="img">
+            <img src="cat heels.gif" alt="">
+        </div> <br>
+        <div class="img">
+            <img src="vat kiss.gif" alt="" >
+        </div>
+        <div class="text"><marquee behavior="" direction=""><h1>hop in My Love! &#10084;</h1></marquee></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Envelope + Letter (Open/Close on Click)</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+
+        
+        button{
+            padding: 1rem;
+            margin: 10px;
+            border-radius:20px ;
+            outline: none;
+            border: none;
+        }
+
+        .yes{
+            width: 80px;
+            font-weight: 900;
+            transition: width 0.5s linear 1s;
+        }
+
+        .yes:hover{
+            width: 100px;
+            background-color: green;
+            color: yellow;
+        }
+        .no{
+            width: 80px;
+            font-weight: 900;
+            transition: width 0.5s linear 1s;
+        } 
+        .no:hover{
+            width: 100px;
+            background-color: red;
+            color: yellow;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .btn{
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            
+        }
+</style>
+<body>
+    <div id="preloader"></div>
+
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>My Love.</strong>
+                        <p>
+                            Hope you are doing great, You're the CSS to my HTML! <br> You make my life so colorful. <br>
+                            Would you be My girlfriend &#10084;? <br>
+                            Sophie Owezie
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+            
+        </div>
+        <div class="btn">
+            <button class="yes" ><a href="yes.html">YES</a></button>
+            <button class="no"><a href="no.html">NO</a></button>
+        </div>
+    </div> 
+    
+
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            
+            setTimeout(function(){
+                loader.style.display = "none";
+            }, 2000)
+        })
+    </script>
+</body>
+</html>
